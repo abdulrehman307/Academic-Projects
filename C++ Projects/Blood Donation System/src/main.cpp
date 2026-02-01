@@ -4,7 +4,7 @@
 #include<iomanip>
 #include<string>
 using namespace std;
-
+// Septate structure for all entities 
 struct Donor{
 	int donorid;
 	string name;
@@ -30,11 +30,8 @@ struct BloodAvailable{
 	string bloodtype;
 	string bloodquantity;
 	string bloodexpirationdate;
-};/*
-vector<Donor> donors;
-vector<Recipient> recipients;
-vector<Donation> donations;
-vector<BloodAvailable> bloodavailabilities;*/
+};
+//Function for add donors
 void Add_Donors(){
 	Donor donor;
 	cout<<"Enter Donor id :";
@@ -64,6 +61,7 @@ void Add_Donors(){
 		
 	}
 }
+//Function for searching donors by their ids
 void Search_Donor_By_ID()
 {
 	int donorid;
@@ -91,7 +89,7 @@ void Search_Donor_By_ID()
 		cout<<"Unable To Open File!....."<<endl;
 	}
 }
-
+//Function for displaying donor list 
 void Display_Donors_List()
 {
 	
@@ -107,7 +105,7 @@ void Display_Donors_List()
 	}
 	infile.close();
 }
-
+//Function for adding recipients of blood
 void Add_Recipients(){
 	Recipient recipient;
 	cout<<"Enter Recipient id :";
@@ -136,6 +134,7 @@ void Add_Recipients(){
 	}
 	
 }
+//funcion for searching recipient data
 void Search_Recipient_By_Id()
 {
 	int recipientid;
@@ -164,6 +163,7 @@ void Search_Recipient_By_Id()
 	}
 	
 }
+//function for dislaying the recipients list
 void Display_Recipients_List()
 {
 	string line;
@@ -174,7 +174,7 @@ void Display_Recipients_List()
 		cout<<line<<endl;
 	}
 }
-
+//Fucntion for the seaching the donors for the required blood group
 void Search_BloodGroup(){
 	string reqbloodgroup;
 	cout<<"Enter Required Blood Group :";
@@ -208,7 +208,7 @@ void Search_BloodGroup(){
 			
 		}
 	}
-
+//Fucniton for adding donation
 void Add_Donations(){
 	Donation donation;
 	cout<<"Enter Donation ID :";
@@ -236,6 +236,7 @@ void Add_Donations(){
 		cout<<"Unable To Open File!....."<<endl;
 	}
 	}
+	//function for searching the donation made
 void Search_Donation_By_Id()
 {
 	int donationId;
@@ -271,7 +272,7 @@ else
 	cout<<"Unable To open file!.....";
 }
 }
-
+//function for dislaying the donations
 void Display_Donations()
 {
 	Donation donation;
@@ -309,6 +310,7 @@ void Add_BloodAvailable()
 	}
 	
 }
+// function for searching the blood group availbilty
 void Check_BloodAvailability_Bysearch()
 {
 	string bloodavailability;
@@ -343,6 +345,7 @@ else
 	cout<<"Unable to open file";
 }
 }
+//funcitonn for displaying the list of bloodgroups available
 void Display_BloodAvailability_List()
 {
 	BloodAvailable bloodavailable;
